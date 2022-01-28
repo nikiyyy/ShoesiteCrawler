@@ -6,8 +6,6 @@ class MobuvkiSpider(scrapy.Spider):
     allowed_domains = ['www.districtshoes.bg']
     start_urls = ['https://www.districtshoes.bg/muje-obuvki?orderBy=default&showBy=80&page=1']
 
-#response.css('a.title::text').getall()
-
     def parse(self, response):
         data = response.css('div.item.preview')
 
